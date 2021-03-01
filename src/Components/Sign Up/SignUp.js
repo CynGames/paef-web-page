@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
-import Link from '@material-ui/core/Link';
+import { Link } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
@@ -108,9 +108,11 @@ export default function SignUp() {
             color="primary"
             className={classes.submit}
           >
+            <Link to="/" style= {{color:"white"}} >
             Registrarse
+            </Link>
           </Button>
-            <Link href="#" variant="body2" align-text="center">
+            <Link to="/" align-text="center">
               ¿Ya posees una cuenta? Inicie Sesión
             </Link>
         </form>

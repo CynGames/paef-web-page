@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
@@ -10,23 +9,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
 import ControlPointIcon from '@material-ui/icons/ControlPoint';
 import Navbar from "./Navbar"
-import { positions } from '@material-ui/system';
+import { Link } from 'react-router-dom';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Croquis
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -165,7 +151,9 @@ export default function Album() {
       </main>
       {/* Footer */}
       <footer className={classes.footer}>
+        <Link to="/tablecreation">
           <ControlPointIcon fontSize="large" />
+        </Link>
         {/* <Typography variant="h6" align="center" gutterBottom>
           Footer
         </Typography>

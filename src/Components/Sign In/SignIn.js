@@ -5,24 +5,19 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import logo from '../../img/logocroquis.png';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Croquis
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import App from '../../App';
+import SignUp from '../Sign Up/SignUp';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -38,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  linkInButton: {
+    textDecoration: "none",
+    color:"white",
+  },
 }));
 
 export default function SignIn() {
@@ -46,11 +45,12 @@ export default function SignIn() {
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
+      <img src={ logo } className="App-logo" alt="logo" />
       <div className={classes.paper}>
       <Typography component="h1" variant="h5" color="textPrimary" align="center">
       Ingrese a Croquis
       </Typography>
-        <form className={classes.form} noValidate>
+        {/* <form className={classes.form} noValidate> */}
           <TextField
             variant="outlined"
             margin="normal"
@@ -84,15 +84,17 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
+            <Link to="/mainpage" className= {classes.linkInButton} >
             Iniciar Sesión
+            </Link>
           </Button>
-          <Link href="#" variant="body2" align="center">
-            {"¿No tienes una cuenta? Registrate!"}
-          </Link>
-        </form>
+            <Link to="/signup">
+              {"¿No tienes una cuenta? Registrate!"}
+            </Link>
+        {/* </form> */}
       </div>
       <Box mt={8}>
-        <Copyright />
+        {/* <Copyright /> */}
       </Box>
     </Container>
   );
