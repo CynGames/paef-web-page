@@ -57,7 +57,7 @@ export default function TableCreation() {
         </form> */}
           <Container maxWidth="sm" >
             <Typography component="h1" className={classes.header} variant="h5" align="center" color="textPrimary" gutterBottom>
-            ¡Crea una nueva Tabla!
+            ¡Crea un nuevo tablero!
             </Typography>
           </Container>
         </div>
@@ -78,7 +78,7 @@ export default function TableCreation() {
                 required
                 fullWidth
                 id="firstName"
-                label="Nombre de la Tabla"
+                label="Nombre del tablero"
                 autoFocus
               />
           </Container>
@@ -95,7 +95,7 @@ export default function TableCreation() {
                 required
                 fullWidth
                 id="firstName"
-                label="Descripción de la Tabla"
+                label="Descripción del tablero"
                 multiline
                 rows="4"
                 rowsMax="10"
