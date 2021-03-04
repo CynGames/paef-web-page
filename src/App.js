@@ -4,6 +4,9 @@ import SignUp from "./Components/Sign Up/SignUp";
 import MainPage from "./Components/Main Page/MainPage";
 import TableCreation from "./Components/Table Creation/TableCreation";
 import StepCreation from "./Components/Table Creation/StepCreation";
+import TableOptions from "./Components/Table Creation/TableOptions";
+import TableView from "./Components/Table View/TableView";
+import StepView from "./Components/Table View/StepView";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -17,7 +20,10 @@ function App() {
               <Route exact path={"/mainpage"} component={MainPage} />
               <Route exact path={"/tablecreation"} component={TableCreation} />
               <Route exact path={"/stepcreation"} component={StepCreation} />
-              {/* <Route exact path={"/"} component={SignIn} /> */}
+              <Route exact path={"/stepview"} component={StepView} />
+              <Route exact path={"/tableview"} component={TableView} />
+              <Route exact path={"/tableoptions"} component={TableOptions} />
+              <Route exact path={"/"} component={SignIn} />
             </Switch>
           </div>
         </Router>

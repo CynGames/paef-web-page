@@ -7,6 +7,7 @@ import Container from "@material-ui/core/Container";
 import ControlPointIcon from "@material-ui/icons/ControlPoint";
 import Navbar from "../Main Page/Navbar";
 import TextField from "@material-ui/core/TextField";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   header: {
@@ -46,7 +47,7 @@ export default function TableCreation() {
       <main className={classes.mainSetting}>
         <CssBaseline />
         <div className={classes.navBar}>
-          <Navbar canReturn="true" />
+          <Navbar canReturn="true" to="/mainpage" />
         </div>
         <div>
           {/* <form action="">
@@ -136,9 +137,11 @@ export default function TableCreation() {
           </Container>
         </div>
         <div className={classes.buttonBottom}>
-          <Button variant="contained" color="primary">
-            Crear Tablero
-          </Button>
+          <Link to="/stepcreation">
+            <Button variant="contained" color="primary">
+              Crear Tablero
+            </Button>
+          </Link>
         </div>
       </main>
       {/* Footer */}

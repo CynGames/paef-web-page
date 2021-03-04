@@ -1,18 +1,17 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import ControlPointIcon from '@material-ui/icons/ControlPoint';
-import Navbar from "./Navbar"
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import Button from "@material-ui/core/Button";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Grid from "@material-ui/core/Grid";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import ControlPointIcon from "@material-ui/icons/ControlPoint";
+import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -30,22 +29,22 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: "56.25%", // 16:9
   },
   cardContent: {
     flexGrow: 1,
   },
   footer: {
-    position:"fixed",
+    position: "fixed",
     bottom: 20,
     right: 20,
     borderRadius: "20px",
-    backgroundColor: 'rgba(255, 255, 255, 0)'
+    backgroundColor: "rgba(255, 255, 255, 0)",
   },
 }));
 
@@ -59,7 +58,7 @@ export default function Album() {
     <React.Fragment>
       <CssBaseline />
       <Navbar />
-        {/* <Toolbar>
+      {/* <Toolbar>
           <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" noWrap>
             Album layout
@@ -70,7 +69,13 @@ export default function Album() {
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
-            <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
+            <Typography
+              component="h1"
+              variant="h4"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+            >
               Mis Tableros
             </Typography>
             {/* Poner Tableros */}
@@ -91,17 +96,17 @@ export default function Album() {
                     <Typography gutterBottom variant="h5" component="h2">
                       Tablero {index + 1}
                     </Typography>
-                    <Typography>
-                      Tablero de Prueba.
-                    </Typography>
+                    <Typography>Tablero de Prueba.</Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
+                    <Link to="/tableview">
+                      <Button size="small" color="primary">
+                        View
+                      </Button>
+                      <Button size="small" color="primary">
+                        Edit
+                      </Button>
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>
@@ -109,8 +114,14 @@ export default function Album() {
           </Grid>
         </Container>
         <div>
-        <Container maxWidth="sm">
-            <Typography component="h1" variant="h4" align="center" color="textPrimary" gutterBottom>
+          <Container maxWidth="sm">
+            <Typography
+              component="h1"
+              variant="h4"
+              align="center"
+              color="textPrimary"
+              gutterBottom
+            >
               Tableros Seguidos
             </Typography>
             {/* Poner Tableros */}
@@ -129,19 +140,19 @@ export default function Album() {
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h5" component="h2">
-                     Tablero {index + 1}
+                      Tablero {index + 1}
                     </Typography>
-                    <Typography>
-                      Tablero en seguimiento de Prueba.
-                    </Typography>
+                    <Typography>Tablero en seguimiento de Prueba.</Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
+                    <Link to="/tableview">
+                      <Button size="small" color="primary">
+                        View
+                      </Button>
+                      <Button size="small" color="primary">
+                        Edit
+                      </Button>
+                    </Link>
                   </CardActions>
                 </Card>
               </Grid>
@@ -149,20 +160,11 @@ export default function Album() {
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
       <footer className={classes.footer}>
         <Link to="/tablecreation">
           <ControlPointIcon fontSize="large" />
         </Link>
-        {/* <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Something here to give the footer a purpose!
-        </Typography> */}
-        {/* <Copyright /> */}
       </footer>
-      {/* End footer */}
     </React.Fragment>
   );
 }
