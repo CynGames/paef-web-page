@@ -63,7 +63,7 @@ export default function TableCreation() {
               color="textPrimary"
               gutterBottom
             >
-              Titulo del Paso
+              Paso Nº 1
             </Typography>
           </Container>
         </div>
@@ -137,7 +137,7 @@ export default function TableCreation() {
         </div>
         <div className={classes.buttonBottom}>
           <Button variant="contained" color="primary">
-            Crear Primer Paso
+            Crear Paso Nº1
           </Button>
         </div>
       </main>

@@ -16,7 +16,7 @@ function App() {
               <Route exact path={"/signup"} component={SignUp} />
               <Route exact path={"/mainpage"} component={MainPage} />
               <Route exact path={"/tablecreation"} component={TableCreation} />
-              <Route exact path={"/"} component={StepCreation} />
+              <Route exact path={"/stepcreation"} component={StepCreation} />
               {/* <Route exact path={"/"} component={SignIn} /> */}
             </Switch>
           </div>
@@ -26,4 +26,6 @@ function App() {
   );
 }
 
+// Acordarse de enlazar Boton de table creation a table options
+// Enlazar paso 1 a table options
 export default App;
