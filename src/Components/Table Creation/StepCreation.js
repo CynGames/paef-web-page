@@ -63,7 +63,7 @@ export default function TableCreation() {
               color="textPrimary"
               gutterBottom
             >
-              ¡Crea un nuevo tablero!
+              Titulo del Paso
             </Typography>
           </Container>
         </div>
